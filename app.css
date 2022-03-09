@@ -1,0 +1,17 @@
+#add{
+    text-align: center;
+}
+
+#title{
+    font-size: 35px;
+    text-align: center;
+}
+
+.card{
+    margin: 5%;
+    width: 20rem;
+}
+
+li{
+    list-style-type: none;
+}
