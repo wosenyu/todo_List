@@ -1,15 +1,8 @@
-const li = document.createElement('li');
-
-const checkbox = document.createElement('input');
-const dueDate = document.querySelector('.Duedate');
-
-checkbox.type = "checkbox";
-//checkbox.value = "str";
-//checkbox.checked = true;
 
 
 
-function Add(str, time) {
+
+function Add(str) {
     const li = document.createElement('li');
 
     const checkbox = document.createElement('input');
@@ -51,12 +44,6 @@ function Add(str, time) {
 function deleteAll() {
     const li = document.getElementById('list');
     const dueDate = document.querySelector('.Duedate');
-    li.removeChild(li.childNodes[0]);
-    dueDate.removeChild(dueDate.childNodes[0]);
-}
-function Delete() {
-    const li = document.getElementById('list');
-    const dueDate = document.querySelector('.Duedate');
 
 
     if (checkbox.checked) {
@@ -66,12 +53,23 @@ function Delete() {
         }
     }
 }
+function Delete() {
+    const li = document.getElementById('list');
+    const dueDate = document.querySelector('.Duedate');
+    li.removeChild(li.childNodes[0]);
+    dueDate.removeChild(dueDate.childNodes[0]);
+}
 
 const list = document.querySelector('ol');
 list.addEventListener('click', function (e) {
-    const audio = new Audio('ding-sound-effect_2.mp3');
+    const audio = new Audio('Check-mark-sound.mp3');
     if (e.target.tagName === 'LI') {
         e.target.classList.toggle('checked');
         audio.play();
     }
 }, false);
+
+
+
+
+

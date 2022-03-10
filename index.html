@@ -37,21 +37,23 @@
     <div class="d-m-flex p-2">
       <form>
 
-        <input type="text" class="form-control " name="userinput">
-        <label for="dueDate" class="d-m-flex p-2">Set Due Date</label>
-        <input type="date" class="dueDate m-3" placeholder="Due Date" name="userDate">
-        <small id="emailHelp" class="form-text text-muted">Press enter or add to ADD to TODO List</small>
+        <input type="text" class="form-control " name="userinput" id="userinput">
+
+        <!-- <label for="dueDate" class="d-m-flex p-2">Set Due Date</label> -->
+        <!-- <input type="date" class="dueDate m-3" placeholder="Due Date" name="userDate"> -->
+        <small id="emailHelp" class="form-text text-muted">Click add to ADD to TODO List. Click on task to crossout
+          task.
+        </small>
 
         <div class="d-flex m-2 justify-content-end">
           <!-- <input type="button" class="btn btn-primary" value="Add" onclick="Add(userinput.value)"> -->
 
 
-          <button type="button" class="btn btn-primary" onclick="Add(userinput.value, userDate.value)">ADD</button>
+          <button type="button" class="btn btn-primary" onclick="Add(userinput.value)">ADD</button>
         </div>
         <div>
-          <button type="button" class="btn btn-danger " value="Delete All TODO" onclick="Delete()">Delete
-            Selected</button>
-          <button type="button" class="btn btn-danger m-3 " value="delete" onclick="deleteAll()">Delete One</button>
+          <button type="button" class="btn btn-danger " value="Delete All TODO" onclick="Delete()">Delete</button>
+
         </div>
       </form>
     </div>
@@ -60,7 +62,6 @@
 
 
   <ol id="list">
-    <input type="checkbox" name="li" id="ck">
     <li>Hw</li>
     <li>pay bills</li>
   </ol>
